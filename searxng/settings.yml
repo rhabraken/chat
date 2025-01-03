@@ -92,6 +92,7 @@ server:
   # enable features designed only for public instances.
   # Is overwritten by ${SEARXNG_PUBLIC_INSTANCE}
   public_instance: false
+  secret_key: "change_me_please"
 
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
