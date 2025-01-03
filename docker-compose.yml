@@ -39,8 +39,9 @@ services:
     ports:
       - "8084:8080"
     volumes:
-      - ./searxng:/usr/local/searxng/searx:rw
-      - ./searxng/settings.yml:/usr/local/searxng/searx/settings.yml:rw
+      - ./searxng/limiter.toml:/usr/local/searxng/searx/limiter.toml
+      - ./searxng/settings.yml:/usr/local/searxng/searx/settings.yml
+      - ./searxng/uwsgi.ini:/usr/local/searxng/searx/uwsgi.ini
     environment:
       - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
       - UWSGI_WORKERS=${SEARXNG_UWSGI_WORKERS:-4}
