@@ -38,7 +38,7 @@ services:
     restart: unless-stopped
     ports:
       - "8084:8080"
-    volumes: # for use with portainer
+    # volumes: # for use with portainer
       # - /mnt/portainer-compose-unpacker/stacks/chat/chat/searxng:/etc/searxng:rw
       # - /mnt/portainer-compose-unpacker/stacks/chat/chat/searxng/settings.yml:/etc/searxng/settings.yml:rw
     environment:
